@@ -7,4 +7,8 @@
 4. The fused output is passed through a linear softmax layer to get the classification probabilities.
 
 
+## Packages
 
+$ pip install pandas
+$ pip install sklearn
+$ pip install torch
