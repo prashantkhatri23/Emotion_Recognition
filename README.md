@@ -10,10 +10,13 @@
 ## Packages
 
 Install the pandas library for data analysis in Python
+
 `pip install pandas`
 
 Installs scikit-learn, a popular machine learning library for Python
+
 `pip install sklearn`
 
 Install PyTorch, an open-source machine learning framework for building and training deep neural networks
+
 `pip install torch`
