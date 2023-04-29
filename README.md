@@ -4,39 +4,76 @@ This repository contains the code for processing and analyzing the IEMOCAP (Inte
 
 ## Overview of our approach
 1. Acoustic frame-level features and lexical word embeddings are used as input for separate BLSTMs.
-2. An context based attention module is applied to pool the outputs of the BLSTMs and generate an utterance-level temporal aggregate.
+2. A context-based attention module is applied to pool the outputs of the BLSTMs and generate an utterance-level temporal aggregate.
 3. The temporal aggregates from the two models are fused using an attention-based modality fusion module.
 4. The fused output is passed through a linear softmax layer to get the classification probabilities.
-
-## Getting Started
-### Prerequisites
-
-Ensure you have the following Python libraries installed:
-
-* pandas
-* numpy
-* IPython
-* opensmile
-
-You can install these libraries using pip:
-
-`pip install pandas numpy IPython opensmile`
 
 ## Dataset
 
 The IEMOCAP dataset is not included in this repository. You need to obtain the dataset from the [official website](https://sail.usc.edu/iemocap/). After obtaining the dataset, unzip it and place it in the root directory of the project.
 
+## Downloading the Large Data File
+
+The data file `data_processed.pkl` (670MB) is too large to be uploaded to GitHub. This file is created after running the `DataProcessing.ipynb` notebook (on the IEMOCAP dataset), which preprocesses the data and extracts features. You can either run the notebook to create the pickle file or download it from Google Drive using the following link:
+
+[Download data_processed.pkl from Google Drive](<https://drive.google.com/file/d/18lCvVF1T9yE884QmQtFwlw7E8id9DlBY/view?usp=share_link>)
+
 ## Usage
 
-Execute the provided Jupyter Notebook to process and analyze the IEMOCAP dataset. The notebook includes the following steps:
+Once you've either created or downloaded the `data_processed.pkl` file and placed it in your project directory, you can load the data using the following code:
 
-1. Explore dataset structure.
-2. Process metadata and transcripts.
-3. Refine emotion categories.
-4. Extract LLD features with OpenSMILE.
-5. Remove samples with non-text characters.
+```python
+import pandas as pd
 
-The final dataset will be stored in the data DataFrame and is ready for further processing and analysis.
+# Load the DataFrame from the pickle file
+data = pd.read_pickle("data_processed.pkl")
+```
+
+## Notebooks
+
+### 1. DataProcessing.ipynb
+
+Description:
+- Explore dataset structure.
+- Process metadata and transcripts.
+- Refine emotion categories.
+- Extract LLD features with OpenSMILE.
+- Remove samples with non-text characters.
+
+Results:
+- The final dataset will be stored in the data DataFrame and is ready for further processing and analysis.
+
+### 2. UnimodalClassifier.ipynb
+
+Description:
+- [Add the description of the notebook here]
+
+Results:
+- [Add the results of the notebook here]
+
+### 3. MMClassifier.ipynb
+
+Description:
+- [Add the description of the notebook here]
+
+Results:
+- [Add the results of the notebook here]
+
+### 4. Analysis.ipynb
+
+Description:
+- [Add the description of the notebook here]
+
+Results:
+- [Add the results of the notebook here]
+
+### 5. Demo.ipynb
+
+Description:
+- [Add the description of the notebook here]
+
+Results:
+- [Add the results of the notebook here]
 
 ## License
 

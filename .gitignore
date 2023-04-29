@@ -181,3 +181,4 @@ ui-tests/.pnp.*
 #Dataset
 IEMOCAP.zip
 IEMOCAP
+data_processed.pickle
