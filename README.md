@@ -1,6 +1,6 @@
 # Multi-Modal Multi-Focus Emotion Recognition
 
-This repository contains the code for processing and analyzing the IEMOCAP (Interactive Emotional Dyadic Motion Capture Database) dataset for emotion recognition from speech. The dataset contains audio files of emotionally expressive speech and corresponding metadata. The code in this repository processes the metadata, extracts features from the audio files, and prepares the dataset for further analysis.
+This repository contains the code for processing and analyzing the IEMOCAP emotion dataset (Interactive Emotional Dyadic Motion Capture Database). The dataset contains audio files of emotionally expressive speech and corresponding metadata. The code in this repository processes the metadata, extracts features from the audio files, and prepares the dataset for further analysis.
 
 ## Overview of our approach
 1. Acoustic frame-level features and lexical word embeddings are used as input for separate BLSTMs.
