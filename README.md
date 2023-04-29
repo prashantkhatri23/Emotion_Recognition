@@ -56,8 +56,71 @@ Results:
 Description:
 - [Add the description of the notebook here]
 
-Results:
-- [Add the results of the notebook here]
+##Results:
+
+### Results for Acoustic only models:
+**Train Results:**
+
+| Model | Train Loss | Weighted Accuracy | Unweighted Accuracy | Angry Acc. | Happy Acc. | Neutral Acc. | Sad Acc. |
+|-------|-----------|------------------|---------------------|------------|------------|--------------|----------|
+| Last Block | 1.1084 | 49.95% | 51.57% | 52.19% | 37.83% | 48.80% | 67.46% |
+| Avg. Pool  | 0.9579 | 61.41% | 62.69% | 65.69% | 51.56% | 60.72% | 72.79% |
+| Attention Weighted Pooling| 0.8352 | 65.31% | 66.54% | 70.75% | 57.51% | 62.97% | 74.94% | 
+
+
+**Test Results:**
+
+| Model | Test Loss | Weighted Accuracy | Unweighted Accuracy | Angry Acc. | Happy Acc. | Neutral Acc. | Sad Acc. |
+|-------|-----------|------------------|---------------------|------------|------------|--------------|----------|
+| Last Block  | 1.1296 | 49.82% | 50.03% | 38.79% | 38.44% | 57.91% | 64.97% |
+| Avg. Pool | 1.0815 | 54.98% | 54.45% | 37.38% | 49.38% | 63.00% | 68.02% |
+| Attention Weighted Pooling| 0.959 | 60.05% | 60.89% | 61.21% | 46.88% | 65.42% | 70.05% | 
+
+### **Results for Lexical Only:**
+**Train Results:**
+
+| Model | Train Loss | Weighted Accuracy | Unweighted Accuracy | Angry Acc. | Happy Acc. | Neutral Acc. | Sad Acc. |
+|-------|-----------|------------------|---------------------|------------|------------|--------------|----------|
+| Last Block | 0.7415 | 71.04% | 71.17% | 71.88% | 73.30% | 67.84% | 71.66% |
+| CLS Block | 0.6517 | 75.52% | 75.71% | 81.44% | 76.89% | 72.64% | 71.88% |
+| Avg. Pool | 0.7926 | 70.70% | 70.29% | 71.65% | 68.73% | 75.71% | 65.08% |
+| Attention Weighted Pooling | 0.6387 | 75.02% | 74.96% | 76.49% | 74.98% | 75.56% | 72.79% |
+
+**Test Results:**
+
+| Model | Test Loss | Weighted Accuracy | Unweighted Accuracy | Angry Acc. | Happy Acc. | Neutral Acc. | Sad Acc. |
+|-------|-----------|------------------|---------------------|------------|------------|--------------|----------|
+| Last Block | 0.9051 | 63.04% | 61.50% | 56.54% | 68.12% | 67.02% | 54.31% |
+| CLS Block | 0.9369 | 63.13% | 63.18% | 62.62% | 65.00% | 61.66% | 63.45% |
+| Avg. Pool| 1.0551 | 62.68% | 60.56% | 52.34% | 70.31% | 67.83% | 51.78% |
+| Attention Weighted Pooling| 0.9641 | 63.13% | 64.83% | 73.36% | 55.62% | 59.79% | 70.56% |
+### MM-B (Baseline Multimodal) Results
+**Train Performance**
+
+| Avg Loss | Weighted Accuracy | Unweighted Accuracy | Anger Accuracy | Happy/Excited Accuracy | Neutral Accuracy | Sad Accuracy |
+|---------|------------------|---------------------|----------------|------------------------|------------------|--------------|
+| 0.6243  | 77.79%           | 78.24%              | 83.14%         | 72.92%                | 78.53%           | 78.38%       |
+
+**Test Performance**
+
+| Avg Loss | Weighted Accuracy | Unweighted Accuracy | Anger Accuracy | Happy/Excited Accuracy | Neutral Accuracy | Sad Accuracy |
+|---------|------------------|---------------------|----------------|------------------------|------------------|--------------|
+| 0.6544  | 75.72%           | 75.99%              | 77.33%         | 75.14%                | 74.47%           | 77.00%       |
+
+
+### MMMLA (multimodal multi level attention) Model Results
+
+**Train Performance**
+
+| Avg Train Loss | Weighted Train Accuracy | Unweighted Train Accuracy | Class 0 Train Accuracy | Class 1 Train Accuracy | Class 2 Train Accuracy | Class 3 Train Accuracy |
+|----------------|-------------------------|----------------------------|------------------------|------------------------|------------------------|------------------------|
+|  0.5157         | 81.45%                  | 81.94%                     | 84.62%                 | 80.86%                 | 78.53%                 | 83.73%                 |
+
+**Test Performance**
+
+|  Avg Test Loss | Weighted Test Accuracy | Unweighted Test Accuracy | Class 0 Test Accuracy | Class 1 Test Accuracy | Class 2 Test Accuracy | Class 3 Test Accuracy |
+|---------------|------------------------|---------------------------|-----------------------|-----------------------|-----------------------|-----------------------|
+| 0.5862        | 77.72%                 | 78.31%                    | 83.11%                | 75.14%                | 75.98%                | 79.00%                |
 
 ### 4. Analysis.ipynb
 
