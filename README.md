@@ -38,6 +38,7 @@ Execute the provided Jupyter Notebook to process and analyze the IEMOCAP dataset
 
 The final dataset will be stored in the data DataFrame and is ready for further processing and analysis.
 
-License
+## License
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
